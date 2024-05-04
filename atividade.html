@@ -1,31 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-widt
-h, initial-scale=1.0">
-<title>Soma</title>
-<link rel="stylesheet" href="styles.css">
-<script src="javascript.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Examples</title>
 </head>
 <body>
-<h4>Olá mundo</h4>
-<label for="valor1">Valor 1</label>
-<input id="valorl" name"valor1" type"text">
-<label for="valor2">Valor 2</label>
-<input id="valor2" name"valor2" type"text">
-<button onclick="calcular()"> Calcular </button>
-<label for="resultado" class="resultado">
-Resultado</label>
-<input id="resultado" name"resultado" type"text">
-<div>
-<p id="azul">Mudar para azul</p>
-<button onclick="changeColor()">Clique para mudar</button>
-</div>
-<div>= $0
-<p class="vermelho">Mudar para vermelho</p>
-<button onclick="altcor()">Clique para mudar
-</button>
-</div>
+
+<!-- (1) Mensagem de 'Olá Mundo' -->
+<script>
+    console.log('Olá Mundo');
+</script>
+
+<!-- (2) Saída de soma de 2 inteiros -->
+<script>
+    var a = 5;
+    var b = 3;
+    var soma = a + b;
+    console.log('A soma de', a, 'e', b, 'é', soma);
+</script>
+
+<!-- (3) Alterar a propriedade de um elemento por id -->
+<p id="paragrafo1">Este é o parágrafo 1.</p>
+
+<script>
+    var paragrafo1 = document.getElementById('paragrafo1');
+    paragrafo1.style.color = 'blue';
+</script>
+
+<!-- (4) Alterar a propriedade de um elemento por name -->
+<p name="paragrafo2">Este é o parágrafo 2.</p>
+
+<script>
+    var paragrafos = document.getElementsByName('paragrafo2');
+    for (var i = 0; i < paragrafos.length; i++) {
+        paragrafos[i].style.fontWeight = 'bold';
+    }
+</script>
+
+<!-- (5) Alterar a propriedade de um elemento por class -->
+<p class="paragrafo3">Este é o parágrafo 3.</p>
+<p class="paragrafo3">Este é outro parágrafo com a mesma classe.</p>
+
+<script>
+    var paragrafosClasse = document.getElementsByClassName('paragrafo3');
+    for (var i = 0; i < paragrafosClasse.length; i++) {
+        paragrafosClasse[i].style.fontStyle = 'italic';
+    }
+</script>
+
 </body>
 </html>
